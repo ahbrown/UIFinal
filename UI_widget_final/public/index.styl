@@ -1,0 +1,61 @@
+.tile-box
+  display block
+  margin auto
+  width 500px
+  height 500px
+  
+  .tile-container
+    width 150px
+    height 150px
+    margin-left 3px
+    display inline-block
+    perspective 1000px
+    
+    .tile-flip
+      position relative
+      -webkit-transform-style preserve-3d
+      transition: transform 1s
+      
+      .tiles
+        position absolute
+        z-index 2
+        width 150px
+        height 150px
+        background-color #d3d3d3
+        backface-visibility hidden
+        transform rotateY(0deg)
+        
+        img
+          width 150px
+          height 150px
+        
+      .back
+        position absolute
+        background-color white
+        width 150px
+        height 150px
+        transform rotateY(0deg)
+        p 
+          font-family 'Quicksand'
+          text-align center
+          margin-top 60px
+      
+  .tile-container:hover .tile-flip, .tile-container, .back
+    cursor pointer
+    -ms-trasform rotateY(-180deg)
+    -webkit-transform rotateY(-180deg)
+    transform rotateY(-180deg)
+
+.text-explanation
+  width 500px
+  margin auto
+  h1
+    font-size 25px
+    font-family 'Verdana'
+    margin-bottom 20px
+    
+
+
+
+    
+    

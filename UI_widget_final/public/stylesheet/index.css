@@ -1,0 +1,60 @@
+.tile-box {
+  display: block;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+}
+.tile-box .tile-container {
+  width: 150px;
+  height: 150px;
+  margin-left: 3px;
+  display: inline-block;
+  perspective: 1000px;
+}
+.tile-box .tile-container .tile-flip {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.tile-box .tile-container .tile-flip .tiles {
+  position: absolute;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+  background-color: #d3d3d3;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+.tile-box .tile-container .tile-flip .tiles img {
+  width: 150px;
+  height: 150px;
+}
+.tile-box .tile-container .tile-flip .back {
+  position: absolute;
+  background-color: #fff;
+  width: 150px;
+  height: 150px;
+  transform: rotateY(0deg);
+}
+.tile-box .tile-container .tile-flip .back p {
+  font-family: 'Quicksand';
+  text-align: center;
+  margin-top: 60px;
+}
+.tile-box .tile-container:hover .tile-flip,
+.tile-box .tile-container,
+.tile-box .back {
+  cursor: pointer;
+  -ms-trasform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.text-explanation {
+  width: 500px;
+  margin: auto;
+}
+.text-explanation h1 {
+  font-size: 25px;
+  font-family: 'Verdana';
+  margin-bottom: 20px;
+}
